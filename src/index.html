@@ -1,0 +1,26 @@
+<html>
+<head>
+  <script type="module" src="src/sensor-icon-card.js" defer></script>
+
+</head>
+<body>
+jo
+<div id="entrypoint">
+</div>
+<script>
+(function() {
+   // your page initialization code here
+   // the DO
+   var d = document.getElementById("entrypoint");
+   const config={'entity':'someEntity'}
+   const element = document.createElement('sensor-icon-card');
+   d.appendChild(element);
+   try {
+     element.setConfig(config);
+   } catch (err) {
+     console.log(err.message, config);
+   }
+})();
+
+</script></body>
+</html>
